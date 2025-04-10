@@ -1,0 +1,143 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.header {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: v.$additional-color-basic;
+
+  @include m.tablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @include m.desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: auto 142px;
+  gap: 14px;
+
+  @include m.tablet {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  @include m.desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header__nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: v.$additional-color-basic;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 39px;
+
+  @include m.tablet {
+    padding-top: 17px;
+    padding-bottom: 57px;
+  }
+
+  @include m.desktop {
+    position: static;
+    display: block;
+    order: 1;
+    padding: 0;
+    width: auto;
+  }
+}
+
+.header__nav--open {
+  display: block;
+}
+
+.header__button-menu {
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  &::after {
+    width: 26px;
+    height: 20px;
+    content: "";
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-image: url("/__spritemap#sprite-menu-view");
+    background-color: v.$white-color-basic;
+    mask-size: 26px 20px;
+    object-fit: cover;
+  }
+
+  @include m.desktop {
+    display: none;
+  }
+}
+
+.header__button-menu--open {
+  width: 24px;
+  height: 24px;
+
+  &::after {
+    mask-image: url("/__spritemap#sprite-close-view");
+    mask-size: 24px 24px;
+  }
+}
+
+.header__logo {
+  justify-self: end;
+
+  @include m.tablet {
+    grid-column: 2 / 3;
+    justify-self: center;
+  }
+
+  @include m.desktop {
+    order: 0;
+    margin-left: 32px;
+    justify-self: unset;
+  }
+}
+
+.header__logo-image {
+  width: 142px;
+  height: 42px;
+  display: block;
+}
+
+.header__phone-link {
+  color: v.$white-color-basic;
+  text-decoration: none;
+  grid-column: 2 / 3;
+  justify-self: end;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+
+  @include m.tablet {
+    grid-column: 3 / 4;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @include m.desktop {
+    order: 2;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
