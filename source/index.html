@@ -53,13 +53,72 @@
     <div data-test="tours">tours</div>
     <div data-test="training">training</div>
     <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
+    <div data-test="promo">promo</div>
     <div data-test="adv">adv</div>
     <div data-test="gallery">gallery</div>
     <div data-test="form">form</div>
     <div data-test="footer">footer</div> -->
 
+    <main class="page-main">
+      <h1 class="visually-hidden">Бюро путешествий «Lifetour».</h1>
 
+      <section class="page-main__promo promo">
+        <h2 class="visually-hidden">Популярные туры.</h2>
+        <div class="promo__wrapper swiper-container">
+          <div class="promo__swiper promo-swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="promo__card">
+                  <div class="promo__background-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero/hero-desktop-1@1x.webp 1x, img/hero/hero-desktop-1@2x.webp 2x" width="1440" height="800">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-tablet-1@1x.webp 1x, img/hero/hero-tablet-1@2x.webp 2x" width="768" height="1034">
+                      <source type="image/webp" srcset="img/hero/hero-mobile-1@1x.webp 1x, img/hero/hero-mobile-1@2x.webp 2x" width="320" height="568">
+                      <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-1@1x.jpg 1x, img/hero/hero-desktop-1@2x.png 2x" width="1440" height="800">
+                      <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-1@1x.png 1x, img/hero/hero-tablet-1@2x.jpg 2x" width="768" height="1034">
+                      <img class="promo__background-image" src="img/hero/hero-mobile-1@1x.jpg" srcset="img/hero/hero-mobile-1@2x.jpg" alt="горы Кавказа." width="320" height="568">
+                    </picture>
+                  </div>
+                  <div class="promo__container container">
+                    <h3>Захватывающие вершины Кавказа</h3>
+                    <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="promo__card">
+                  <div class="promo__background-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero/hero-desktop-2@1x.webp 1x, img/hero/hero-desktop-2@2x.webp 2x" width="1440" height="800">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-tablet-2@1x.webp 1x, img/hero/hero-tablet-2@2x.webp 2x" width="768" height="1034">
+                      <source type="image/webp" srcset="img/hero/hero-mobile-2@1x.webp 1x, img/hero/hero-mobile-2@2x.webp 2x" width="320" height="568">
+                      <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-2@1x.jpg 1x, img/hero/hero-desktop-2@2x.png 2x" width="1440" height="800">
+                      <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-2@1x.png 1x, img/hero/hero-tablet-2@2x.jpg 2x" width="768" height="1034">
+                      <img class="promo__background-image" src="img/hero/hero-mobile-2@1x.jpg" srcset="img/hero/hero-mobile-2@2x.jpg" alt="горы Камчатки." width="320" height="568">
+                    </picture>
+                  </div>
+                  <div class="promo__container container">
+                    <h3>Невероятная природа Камчатки</h3>
+                    <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+                  </div>
+                </div>
+              </li>
+              <div class="promo__background-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero/hero-desktop-3@1x.webp 1x, img/hero/hero-desktop-3@2x.webp 2x" width="1440" height="800">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-tablet-3@1x.webp 1x, img/hero/hero-tablet-3@2x.webp 2x" width="768" height="1034">
+                  <source type="image/webp" srcset="img/hero/hero-mobile-3@1x.webp 1x, img/hero/hero-mobile-3@2x.webp 2x" width="320" height="568">
+                  <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-3@1x.jpg 1x, img/hero/hero-desktop-3@2x.png 2x" width="1440" height="800">
+                  <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-3@1x.png 1x, img/hero/hero-tablet-3@2x.jpg 2x" width="768" height="1034">
+                  <img class="promo__background-image" src="img/hero/hero-mobile-3@1x.jpg" srcset="img/hero/hero-mobile-3@2x.jpg" alt="горы Камчатки." width="320" height="568">
+                </picture>
+              </div>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+    </main>
     <script type="module" src="js/main.js"></script>
   </body>
 

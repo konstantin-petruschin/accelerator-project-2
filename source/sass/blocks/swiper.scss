@@ -1,0 +1,8 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.swiper-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
