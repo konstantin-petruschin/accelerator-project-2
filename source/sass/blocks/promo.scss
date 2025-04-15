@@ -1,0 +1,201 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.promo__card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(568px, auto);
+
+  @include m.tablet {
+    grid-template-rows: minmax(1034px, auto);
+  }
+
+  @include m.desktop {
+    grid-template-rows: minmax(800px, auto);
+  }
+}
+
+.promo__background-wrapper {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.promo__background-image {
+  display: block;
+  height: 100%;
+  background-color: v.$active-color;
+}
+
+.promo__container {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  text-align: center;
+  color: v.$white-color-basic;
+  padding-top: 144px;
+
+  @include m.tablet {
+    padding-top: 342px;
+  }
+
+  @include m.desktop {
+    width: 100%;
+    padding-top: 200px;
+    text-align: left;
+  }
+
+  &--kamchatka {
+    padding-top: 134px;
+
+    @include m.tablet {
+      padding-top: 137px;
+    }
+
+    @include m.desktop {
+      padding-top: 200px;
+    }
+  }
+
+  &--altai {
+    padding-top: 120px;
+
+    @include m.tablet {
+      padding-top: 342px;
+    }
+
+    @include m.desktop {
+      padding-top: 200px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 26px;
+
+    @include m.tablet {
+      font-size: 56px;
+      line-height: 56px;
+      margin-bottom: 13px;
+    }
+
+    @include m.desktop {
+      font-size: 77px;
+      line-height: 77px;
+      margin-bottom: 23px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 60px;
+
+    @include m.tablet {
+      font-size: 17px;
+      line-height: 24px;
+      max-width: 474px;
+      margin: 0 auto 38px;
+    }
+
+    @include m.desktop {
+      margin: 0 0 37px;
+      max-width: 464px;
+    }
+  }
+}
+
+.promo__container--kamchatka h3 {
+  @include m.desktop {
+    max-width: 810px;
+  }
+}
+
+.promo__photo-wrapper {
+  @include m.desktop {
+    position: absolute;
+    top: 187px;
+    right: 120px;
+  }
+}
+
+.promo__photo-image {
+  width: 442px;
+  display: block;
+  margin: 0 auto;
+
+  @include m.desktop {
+    width: 410px;
+    margin: 0;
+  }
+}
+
+.promo__link {
+  margin-bottom: 134px;
+
+  &--kamchatka {
+    margin-bottom: 44px;
+
+    @include m.desktop {
+      margin-bottom: 134px;
+    }
+  }
+}
+
+
+.promo__photo-wrapper {
+  display: none;
+
+  @include m.tablet {
+    display: block;
+  }
+}
+
+
+.promo__tour-preview {
+  display: none;
+
+  @include m.desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.promo__tour-duration,
+.promo__tour-complexity {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 13px 19px;
+  border: 1px solid v.$white-color-500;
+  font-size: 12px;
+  line-height: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 12px 12px;
+    background-color: v.$white-color-basic;
+    mask-repeat: no-repeat;
+  }
+}
+
+.promo__tour-duration::before {
+  mask-image: url("/__spritemap#sprite-moon-view");
+}
+
+.promo__tour-complexity::before {
+  mask-image: url("/__spritemap#sprite-level-view");
+}

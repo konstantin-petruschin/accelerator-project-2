@@ -4,9 +4,10 @@
 // import 'swiper/css';
 
 import { toggleMenu } from "./mobile-menu";
-
+import { initPromoSlider } from "./promo-swiper";
 
 document.addEventListener('DOMContentLoaded', () => {
-  toggleMenu()
+  toggleMenu();
+  initPromoSlider();
 });
 

@@ -6,3 +6,45 @@
   padding: 0;
   margin: 0;
 }
+
+.promo-swiper {
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-pagination {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  @include m.desktop {
+    left: unset;
+    right: 5%;
+    bottom: 92px;
+  }
+}
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid v.$white-color-basic;
+  background-color: transparent;
+
+  @include m.tablet {
+    width: 20px;
+    height: 20px;
+
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: v.$white-color-basic;
+}

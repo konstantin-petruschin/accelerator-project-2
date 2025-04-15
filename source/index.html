@@ -62,7 +62,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Бюро путешествий «Lifetour».</h1>
 
-      <section class="page-main__promo promo">
+      <section class="page-main__promo promo" data-test="hero">
         <h2 class="visually-hidden">Популярные туры.</h2>
         <div class="promo__wrapper swiper-container">
           <div class="promo__swiper promo-swiper">
@@ -80,8 +80,14 @@
                     </picture>
                   </div>
                   <div class="promo__container container">
-                    <h3>Захватывающие вершины Кавказа</h3>
-                    <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                    <h3>Захватывающие вершины&nbsp;Кавказа</h3>
+                    <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на&nbsp;вершину горы Чегет.</p>
+                    <a href="#" class="promo__link button">Смотреть тур</a>
+
+                    <div class="promo__tour-preview">
+                      <span class="promo__tour-duration">6 дней/5 ночей</span>
+                      <span class="promo__tour-complexity">Высокая сложность</span>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -97,23 +103,50 @@
                       <img class="promo__background-image" src="img/hero/hero-mobile-2@1x.jpg" srcset="img/hero/hero-mobile-2@2x.jpg" alt="горы Камчатки." width="320" height="568">
                     </picture>
                   </div>
-                  <div class="promo__container container">
-                    <h3>Невероятная природа Камчатки</h3>
-                    <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+                  <div class="promo__container promo__container--kamchatka container">
+                    <h3>Невероятная природа&nbsp;Камчатки</h3>
+                    <p>Незабываемое приключение, во&nbsp;время которого вы&nbsp;отправитесь в&nbsp;путешествие по одному из самых нетронутых уголков дикой природы&nbsp;в мире.</p>
+                    <a href="#" class="promo__link promo__link--kamchatka button">Смотреть тур</a>
+                    <div class="promo__photo-wrapper">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero/photo-cards-desktop@1x.webp 1x, img/hero/photo-cards-desktop@2x.webp 2x" width="410" height="459">
+                        <source type="image/webp" srcset="img/hero/photo-cards@1x.webp 1x, img/hero/photo-cards@2x.webp 2x" width="442" height="365">
+                        <source type="image/png"  media="(min-width: 1440px)" srcset="img/hero/photo-cards-desktop@1x.png 1x, img/hero/photo-cards-desktop@2x.png 2x" width="410" height="459">
+                        <img class="promo__photo-image" src="img/hero/photo-cards@1x.png" srcset="img/hero/photo-cards@2x.png" alt="Фотографии пеших прогулок по горам." width="442" height="365">
+                      </picture>
+                    </div>
+                    <div class="promo__tour-preview">
+                      <span class="promo__tour-duration">6 дней/5 ночей</span>
+                      <span class="promo__tour-complexity">Средняя сложность</span>
+                    </div>
                   </div>
                 </div>
               </li>
-              <div class="promo__background-wrapper">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero/hero-desktop-3@1x.webp 1x, img/hero/hero-desktop-3@2x.webp 2x" width="1440" height="800">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-tablet-3@1x.webp 1x, img/hero/hero-tablet-3@2x.webp 2x" width="768" height="1034">
-                  <source type="image/webp" srcset="img/hero/hero-mobile-3@1x.webp 1x, img/hero/hero-mobile-3@2x.webp 2x" width="320" height="568">
-                  <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-3@1x.jpg 1x, img/hero/hero-desktop-3@2x.png 2x" width="1440" height="800">
-                  <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-3@1x.png 1x, img/hero/hero-tablet-3@2x.jpg 2x" width="768" height="1034">
-                  <img class="promo__background-image" src="img/hero/hero-mobile-3@1x.jpg" srcset="img/hero/hero-mobile-3@2x.jpg" alt="горы Камчатки." width="320" height="568">
-                </picture>
-              </div>
+              <li class="swiper-slide">
+                <div class="promo__card">
+                  <div class="promo__background-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero/hero-desktop-3@1x.webp 1x, img/hero/hero-desktop-3@2x.webp 2x" width="1440" height="800">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-tablet-3@1x.webp 1x, img/hero/hero-tablet-3@2x.webp 2x" width="768" height="1034">
+                      <source type="image/webp" srcset="img/hero/hero-mobile-3@1x.webp 1x, img/hero/hero-mobile-3@2x.webp 2x" width="320" height="568">
+                      <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-3@1x.jpg 1x, img/hero/hero-desktop-3@2x.png 2x" width="1440" height="800">
+                      <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-3@1x.png 1x, img/hero/hero-tablet-3@2x.jpg 2x" width="768" height="1034">
+                      <img class="promo__background-image" src="img/hero/hero-mobile-3@1x.jpg" srcset="img/hero/hero-mobile-3@2x.jpg" alt="природа Алтая." width="320" height="568">
+                    </picture>
+                  </div>
+                  <div class="promo__container promo__container--altai container">
+                    <h3>Магические пейзажи Алтайского&nbsp;Края</h3>
+                    <p>Алтайский трекинг-тур — это&nbsp;захватывающее приключение с&nbsp;посещением магических и&nbsp;захватывающих дух ландшафтов Алтайских гор.</p>
+                    <a href="#" class="promo__link button">Смотреть тур</a>
+                    <div class="promo__tour-preview">
+                      <span class="promo__tour-duration">6 дней/5 ночей</span>
+                      <span class="promo__tour-complexity">Лёгкая сложность</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
+            <div class="swiper-pagination"></div>
           </div>
 
         </div>

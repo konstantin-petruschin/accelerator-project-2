@@ -2,6 +2,7 @@
 @use "../common/variables.scss" as v;
 
 img {
+  width: 100%;
   max-width: 100%;
   object-fit: cover;
   height: auto;
@@ -11,6 +12,7 @@ img {
 *::after,
 *::before {
   box-sizing: border-box;
+  // outline: 1px solid red;
 }
 
 .visually-hidden {
