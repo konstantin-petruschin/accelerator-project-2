@@ -37,7 +37,10 @@
           </ul>
         </nav>
         <a class="header__logo">
-          <img class="header__logo-image" src="img/logotype.svg" alt="Логтип «Lifetour»." width="142" height="42">
+          <svg width="142" height="42">
+            <use href="/__spritemap#sprite-logotype"></use>
+          </svg>
+          <span class="visually-hidden">Логотип Lifetour.</span>
         </a>
         <a class="header__phone-link" href="tel:88000000000">8 800 000-00-00</a>
       </div>
@@ -74,8 +77,8 @@
                       <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero/hero-desktop-1@1x.webp 1x, img/hero/hero-desktop-1@2x.webp 2x" width="1440" height="800">
                       <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-tablet-1@1x.webp 1x, img/hero/hero-tablet-1@2x.webp 2x" width="768" height="1034">
                       <source type="image/webp" srcset="img/hero/hero-mobile-1@1x.webp 1x, img/hero/hero-mobile-1@2x.webp 2x" width="320" height="568">
-                      <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-1@1x.jpg 1x, img/hero/hero-desktop-1@2x.png 2x" width="1440" height="800">
-                      <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-1@1x.png 1x, img/hero/hero-tablet-1@2x.jpg 2x" width="768" height="1034">
+                      <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-1@1x.jpg 1x, img/hero/hero-desktop-1@2x.jpg 2x" width="1440" height="800">
+                      <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-1@1x.jpg 1x, img/hero/hero-tablet-1@2x.jpg 2x" width="768" height="1034">
                       <img class="promo__background-image" src="img/hero/hero-mobile-1@1x.jpg" srcset="img/hero/hero-mobile-1@2x.jpg" alt="горы Кавказа." width="320" height="568">
                     </picture>
                   </div>
@@ -98,8 +101,8 @@
                       <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero/hero-desktop-2@1x.webp 1x, img/hero/hero-desktop-2@2x.webp 2x" width="1440" height="800">
                       <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-tablet-2@1x.webp 1x, img/hero/hero-tablet-2@2x.webp 2x" width="768" height="1034">
                       <source type="image/webp" srcset="img/hero/hero-mobile-2@1x.webp 1x, img/hero/hero-mobile-2@2x.webp 2x" width="320" height="568">
-                      <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-2@1x.jpg 1x, img/hero/hero-desktop-2@2x.png 2x" width="1440" height="800">
-                      <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-2@1x.png 1x, img/hero/hero-tablet-2@2x.jpg 2x" width="768" height="1034">
+                      <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-2@1x.jpg 1x, img/hero/hero-desktop-2@2x.jpg 2x" width="1440" height="800">
+                      <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-2@1x.jpg 1x, img/hero/hero-tablet-2@2x.jpg 2x" width="768" height="1034">
                       <img class="promo__background-image" src="img/hero/hero-mobile-2@1x.jpg" srcset="img/hero/hero-mobile-2@2x.jpg" alt="горы Камчатки." width="320" height="568">
                     </picture>
                   </div>
@@ -129,8 +132,8 @@
                       <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero/hero-desktop-3@1x.webp 1x, img/hero/hero-desktop-3@2x.webp 2x" width="1440" height="800">
                       <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-tablet-3@1x.webp 1x, img/hero/hero-tablet-3@2x.webp 2x" width="768" height="1034">
                       <source type="image/webp" srcset="img/hero/hero-mobile-3@1x.webp 1x, img/hero/hero-mobile-3@2x.webp 2x" width="320" height="568">
-                      <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-3@1x.jpg 1x, img/hero/hero-desktop-3@2x.png 2x" width="1440" height="800">
-                      <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-3@1x.png 1x, img/hero/hero-tablet-3@2x.jpg 2x" width="768" height="1034">
+                      <source type="image/jpg"  media="(min-width: 1440px)" srcset="img/hero/hero-desktop-3@1x.jpg 1x, img/hero/hero-desktop-3@2x.jpg 2x" width="1440" height="800">
+                      <source type="image/jpg"  media="(min-width: 768px)" srcset="img/hero/hero-tablet-3@1x.jpg 1x, img/hero/hero-tablet-3@2x.jpg 2x" width="768" height="1034">
                       <img class="promo__background-image" src="img/hero/hero-mobile-3@1x.jpg" srcset="img/hero/hero-mobile-3@2x.jpg" alt="природа Алтая." width="320" height="568">
                     </picture>
                   </div>
@@ -152,6 +155,86 @@
         </div>
       </section>
     </main>
+    <footer class="footer" data-test="footer">
+      <div class="footer__contacts contacts">
+        <div class="contacts__container container">
+          <h2 class="contacts__heading heading" data-title="Контакты">Контакты</h2>
+          <p>Свяжитесь с нами любым удобным для&nbsp;вас способом или приходите к&nbsp;нам&nbsp;в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
+          <ul class="contacts__list">
+            <li class="contacts__item contacts__item--tel">
+              <h3 class="contacts__name">Телефон</h3>
+              <a class="contacts__link" href="tel:+79837454545" >+7 983 745-45-45</a>
+            </li>
+            <li class="contacts__item  contacts__item--email">
+              <h3 class="contacts__name">Email</h3>
+              <a class="contacts__link" href="mailto:info@lifetour.com">info@lifetour.com</a>
+            </li>
+            <li class="contacts__item  contacts__item--address">
+              <h3 class="contacts__name">Адрес</h3>
+              <address class="contacts__address">г. Москва, пр-т Мира, д.&nbsp;14, офис 101</address>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__map-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/contacts/map-desktop@1x.webp 1x, img/contacts/map-desktop@2x.webp 2x" width="600" height="324">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/contacts/map-tablet@1x.webp 1x, img/contacts/map-tablet@2x.webp 2x" width="768" height="340">
+            <source type="image/webp" srcset="img/contacts/map@1x.webp 1x, img/contacts/map@2x.webp 2x" width="320" height="343">
+            <source type="image/png"  media="(min-width: 1440px)" srcset="img/contacts/map-desktop@1x.png 1x, img/contacts/map-desktop@2x.png 2x" width="600" height="324">
+            <source type="image/png"  media="(min-width: 768px)" srcset="img/contacts/map-tablet@1x.png 1x, img/contacts/map-tablet@2x.png 2x" width="768" height="340">
+            <img class="promo__map-image" src="img/contacts/map@1x.png" srcset="img/contacts/map@2x.png 2x" alt="Расположение офиса на карте." width="320" height="343">
+          </picture>
+        </div>
+      </div>
+      <div class="footer__navigation container">
+        <a class="footer__logo">
+          <svg width="142" height="42">
+            <use href="/__spritemap#sprite-logotype"></use>
+          </svg>
+          <span class="visually-hidden">Логотип Lifetour.</span>
+        </a>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item footer__nav-item--tours">
+                <a class="footer__nav-link" href="#">Туры</a>
+            </li>
+            <li class="footer__nav-item footer__nav-item--training">
+                <a class="footer__nav-link" href="#">Обучение</a>
+            </li>
+            <li class="footer__nav-item footer__nav-item--about">
+                <a class="footer__nav-link" href="#">О нас</a>
+            </li>
+            <li class="footer__nav-item footer__nav-item--reviews">
+                <a class="footer__nav-link" href="#">Отзывы</a>
+            </li>
+            <li class="footer__nav-item footer__nav-item--photos">
+                <a class="footer__nav-link" href="#">Фотографии</a>
+            </li>
+            <li class="footer__nav-item footer__nav-item--contacts">
+                <a class="footer__nav-link" href="#">Контакты</a>
+            </li>
+        </ul>
+        </nav>
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--vk" href="#">
+              <span class="visually-hidden">Мы вконтакте.</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--ok" href="#">
+              <span class="visually-hidden">Мы в одноклассниках.</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--reddit" href="#">
+              <span class="visually-hidden">Мы в реддит.</span>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__privacy-policy" href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
     <script type="module" src="js/main.js"></script>
   </body>
 

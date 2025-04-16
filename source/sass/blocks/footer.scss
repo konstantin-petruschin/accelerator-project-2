@@ -1,0 +1,124 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.footer__contacts {
+  border-bottom: 1px solid v.$stroke-br-color;
+}
+
+.footer__logo svg {
+  color: v.$primary-color;
+}
+
+.footer__navigation {
+  padding-top: 23px;
+  padding-bottom: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+}
+
+.footer__nav-list,
+.footer__social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__nav-list {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 11px 50px;
+  justify-content: center;
+  grid-template-areas:
+  "tours reviews"
+  "training photos"
+  "about contacts";
+  text-align: center;
+}
+
+.footer__nav-item {
+  &--tours {
+    grid-area: tours;
+  }
+
+  &--training {
+    grid-area: training;
+  }
+
+  &--about {
+    grid-area: about;
+  }
+
+  &--reviews {
+    grid-area: reviews;
+  }
+
+  &--photos {
+    grid-area: photos;
+  }
+
+  &--contacts {
+    grid-area: contacts;
+  }
+}
+
+.footer__nav-link {
+  color: v.$primary-color;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 3px;
+}
+
+.footer__nav {
+  margin-bottom: 3px;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid v.$primary-color;
+  text-decoration: none;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #030a1a;
+  }
+
+  &--vk::before {
+    mask-image: url("/__spritemap#sprite-vk-view");
+    mask-size: 16px 9px;
+  }
+
+  &--ok::before {
+    mask-image: url("/__spritemap#sprite-odnoklassniki-view");
+    mask-size: 9px 16px;
+  }
+
+  &--reddit::before {
+    mask-image: url("/__spritemap#sprite-reddit-view");
+    mask-size: 14px 15px;
+  }
+}
+
+.footer__privacy-policy {
+  color: v.$primary-color;
+  text-decoration: none;
+}

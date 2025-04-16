@@ -1,0 +1,91 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.contacts {
+  padding-top: 37px;
+  padding-bottom: 14px;
+}
+
+.contacts__heading {
+  margin-bottom: 28px;
+}
+
+.contacts p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.contacts__item {
+  display: grid;
+  grid-template-columns: 22px auto;
+  gap: 0 10px;
+
+
+  &::before {
+    display: block;
+    content: "";
+    width: 22px;
+    height: 22px;
+    grid-column: 1 / 2;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 22px 22px;
+    background-color: v.$primary-color;
+  }
+}
+
+.contacts__item--tel::before {
+  mask-image: url("/__spritemap#sprite-phone-view");
+}
+
+.contacts__item--email::before {
+
+  mask-size: 22px 16px;
+  mask-image: url("/__spritemap#sprite-mail-view");
+}
+
+.contacts__item--address::before {
+
+  mask-size: 16px 22px;
+  mask-image: url("/__spritemap#sprite-pin-view");
+}
+
+
+.contacts__name {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / 3;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+
+}
+
+.contacts__link {
+  color: v.$primary-color;
+  text-decoration: none;
+  grid-column: 2 / 3;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  grid-column: 2 / 3;
+  width: calc(100% - 70px);
+}

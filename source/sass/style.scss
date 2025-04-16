@@ -7,10 +7,13 @@
 @use "mixins/media";
 @use "common/global";
 @use "common/fonts";
-// @use "blocks/heading";
+@use "blocks/heading";
 @use "blocks/button";
 @use "blocks/page";
 @use "blocks/header";
 @use "blocks/nav";
 @use "blocks/promo";
 @use "blocks/swiper";
+@use "blocks/footer.scss";
+@use "blocks/contacts.scss";
+

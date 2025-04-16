@@ -115,10 +115,11 @@
   }
 }
 
-.header__logo-image {
+.header__logo svg {
   width: 142px;
   height: 42px;
   display: block;
+  color: v.$white-color-basic
 }
 
 .header__phone-link {
