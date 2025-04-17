@@ -17,8 +17,8 @@
   }
 }
 
-
 .nav__link {
+  position: relative;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
@@ -28,6 +28,7 @@
   width: 100%;
   padding: 11px 15px;
   display: block;
+  transition: color ease 0.3s;
 
   @include m.tablet {
     font-size: 16px;
@@ -37,8 +38,48 @@
 
   @include m.desktop {
     width: auto;
-    padding: 23px 15px 23px 16px;
+    padding: 4px 15px 4px 16px;
     font-weight: 400;
     text-transform: none;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: v.$white-color-basic;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    opacity: 0;
+    transition: opacity ease 0.3s;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: 1px solid v.$white-color-basic;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &:active {
+    outline: none;
+    color: v.$active-color;
+  }
+
+  &--disabled {
+    color: v.$disabled-color;
+    cursor: none;
+    pointer-events: none;
+    outline: none;
   }
 }

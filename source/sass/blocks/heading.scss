@@ -10,6 +10,16 @@
   margin: 0;
   padding: 0;
 
+  @include m.tablet {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @include m.desktop {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
   &::before {
     font-family: inherit;
     font-weight: 800;
@@ -20,11 +30,12 @@
     opacity: 0.03;
 
     @include m.tablet {
-      top: -16px;
+      top: -8px;
       font-size: 40px;
     }
 
     @include m.desktop {
+      top: -7px;
       font-size: 55px;
     }
   }

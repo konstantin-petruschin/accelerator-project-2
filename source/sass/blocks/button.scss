@@ -12,4 +12,32 @@
   background-color: v.$additional-color-basic;
   border: none;
   cursor: pointer;
+  transition: color ease 0.3s, background-color ease 0.3s;
+
+  &:hover {
+    color: v.$active-color;
+    outline: 1px solid v.$active-color;
+    background-color: v.$white-color-basic;
+  }
+
+  &:focus {
+    color: v.$active-color;
+    outline: none;
+    background-color: v.$white-color-basic;
+  }
+
+  &:active {
+    color: v.$white-color-basic;
+    outline: none;
+    background-color: v.$active-color;
+  }
+
+  &--disabled,
+  &:disabled {
+    color: v.$disabled-color;
+    cursor: none;
+    pointer-events: none;
+    outline: none;
+  }
+
 }

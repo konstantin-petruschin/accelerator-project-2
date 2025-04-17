@@ -13,8 +13,8 @@
   }
 
   @include m.desktop {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 42px;
+    padding-bottom: 42px;
   }
 }
 
@@ -141,5 +141,25 @@
     order: 2;
     font-size: 18px;
     line-height: 18px;
+  }
+
+  &:hover {
+    color: v.$white-color-500
+  }
+
+  &:focus {
+    outline: none;
+    color: v.$primary-color;
+  }
+
+  &:active {
+    color: v.$active-color;
+  }
+
+  &--disabled {
+    color: v.$disabled-color;
+    cursor: none;
+    pointer-events: none;
+    outline: none;
   }
 }
