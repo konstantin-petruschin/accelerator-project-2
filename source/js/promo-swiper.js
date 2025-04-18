@@ -6,28 +6,40 @@ export const initPromoSlider = () => {
   new Swiper('.promo-swiper', {
     modules: [Pagination],
     slidesPerView: 1,
-    initialSlide: 0,
-    watchOverflow: true,
-    centeredSlides: true,
     loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
       type: 'bullets',
-      renderBullet: function (index, className) {
-        // Исправлено на возврат HTML-строки
-        return `<button class="${className}" tabindex="0" aria-label="Слайд ${index + 1}"></button>`;
-      },
+      bulletClass: 'swiper-pagination-bullet',
+      bulletActiveClass: 'swiper-pagination-bullet-active',
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
+    on: {
+      slideChange: function () {
+        const activeIndex = this.activeIndex;
+        const bullets = document.querySelectorAll('.promo .swiper-pagination-bullet')
+
+        bullets.forEach((bullet, index) => {
+          bullet.setAttribute('tabindex', '0');
+          bullet.addEventListener('keydown', (evt) =>{
+            if(evt.key === 'Enter') {
+              this.slideTo(index);
+              bullet.blur();
+            }
+          });
+        });
+        const promoLinks = document.querySelectorAll('.promo__link');
+        promoLinks.forEach((btn) => btn.setAttribute('tabindex', '-1'));
+        if(promoLinks[activeIndex]) {
+          promoLinks[activeIndex].tabIndex = "0"
+        }
+      }
     },
-   
+    slideToClickedSlide: true,
     breakpoints: {
       1440: {
         allowTouchMove: false,
       },
     },
   });
-};
+}
