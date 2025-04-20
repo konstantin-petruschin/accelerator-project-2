@@ -1,0 +1,43 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+
+.tours {
+  padding-top: 39px;
+  padding-bottom: 40px;
+}
+
+.tours__heading {
+  margin-bottom: 39px;
+}
+
+.tours__wrapper {
+  margin-bottom: 25px;
+}
+
+.tours__all-link {
+  padding: 10px;
+  color: v.$primary-color;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  gap: 12px;
+  letter-spacing: 0.55px;
+
+  &::after {
+    content: "";
+    width: 12px;
+    height: 14px;
+    mask-image: url("/__spritemap#sprite-right-view");
+    mask-size: 12px 14px;
+    mask-repeat: no-repeat;
+    background-color: v.$primary-color;
+    mask-position: center;
+  }
+}
+

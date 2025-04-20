@@ -70,3 +70,8 @@
 .swiper-pagination-bullet-active {
   background-color: v.$white-color-basic;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
