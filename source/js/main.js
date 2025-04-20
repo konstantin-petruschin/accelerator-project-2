@@ -3,11 +3,13 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 
-import { toggleMenu } from "./mobile-menu";
-import { initPromoSlider } from "./promo-swiper";
+import { toggleMenu } from './mobile-menu';
+import { initPromoSlider } from './promo-swiper';
+import { initToursSlider } from './tours-swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
   toggleMenu();
   initPromoSlider();
+  initToursSlider();
 });
 

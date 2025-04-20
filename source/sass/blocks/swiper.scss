@@ -1,13 +1,19 @@
 @use "../mixins/media.scss" as m;
 @use "../common/variables.scss" as v;
 
+.swiper-container {
+  position: relative;
+}
+
+
 .swiper-wrapper {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.promo-swiper {
+.promo-swiper,
+.tours-swiper {
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -43,7 +49,6 @@
   @include m.tablet {
     width: 20px;
     height: 20px;
-
   }
 
   &:hover {

@@ -40,7 +40,7 @@
     padding-top: 34px;
     display: grid;
     grid-template-columns: 142px auto;
-    gap: 29px 37px
+    gap: 29px 37px;
   }
 
   @include m.desktop {
@@ -76,9 +76,9 @@
   gap: 0 50px;
   justify-content: center;
   grid-template-areas:
-  "tours reviews"
-  "training photos"
-  "about contacts";
+    "tours reviews"
+    "training photos"
+    "about contacts";
   text-align: center;
 
   @include m.tablet {

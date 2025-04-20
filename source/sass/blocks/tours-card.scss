@@ -1,0 +1,144 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.tours-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.tours-card__image-wrapper {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.tours-card__image {
+  display: block;
+}
+
+.tours-card__content {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  color: v.$white-color-basic;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px 20px;
+  gap: 15px;
+}
+
+.tours-card__info {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tours-card__info-item {
+  display: flex;
+  align-items: center;
+}
+
+.tours-card__info-item--location {
+  justify-content: flex-start;
+  background-color: v.$additional-color-basic;
+  padding: 6px 12px;
+  gap: 6px;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    display: block;
+    width: 9px;
+    height: 12px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: v.$white-color-basic;
+    mask-image: url("/__spritemap#sprite-pin-white-view");
+    mask-size: 9px 12px;
+  }
+}
+
+.tours-card__info-item--durarion {
+  gap: 16px;
+}
+
+.tours-card__info-item--durarion span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    mask-size: 20px 20px;
+    mask-position: center;
+    background-color: v.$white-color-basic;
+  }
+
+  &:first-child::before {
+    mask-image: url("/__spritemap#sprite-sun-view");
+  }
+
+  &:last-child::before {
+    width: 16px;
+    height: 16px;
+    mask-size: 16px 16px;
+    mask-image: url("/__spritemap#sprite-moon-view");
+  }
+}
+
+.tours-card__title {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background-color: v.$white-color-200;
+    display: block;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.tours-card__preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tours-card__name {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.tours-card__stars {
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  display: block;
+  width: 84px;
+  height: 16px;
+  background-image: url("/__spritemap#sprite-stars-4-view");
+}
+
+.tours-card__value {
+  padding: 0;
+  margin: 0;
+  margin-top: 7px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
+}
