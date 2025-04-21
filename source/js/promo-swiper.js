@@ -6,6 +6,7 @@ export const initPromoSlider = () => {
   new Swiper('.promo-swiper', {
     modules: [Pagination],
     slidesPerView: 1,
+    spaceBetween: 40,
     loop: true,
     pagination: {
       el: '.swiper-pagination',

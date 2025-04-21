@@ -73,5 +73,34 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: v.$additional-color-basic;
+  width: 37px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    width: 14px;
+    height: 9px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: v.$white-color-basic;
+    mask-image: url("/__spritemap#sprite-next-view");
+    mask-size: 14px 9px;
+  }
+}
+
+.swiper-button-prev::after {
+  transform: rotate(180deg);
+}
+
+.swiper-button-disabled {
+  background-color: v.$disabled-color;
+  cursor: none;
+  pointer-events: none;
+  outline: none;
 }

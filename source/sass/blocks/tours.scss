@@ -5,14 +5,36 @@
 .tours {
   padding-top: 39px;
   padding-bottom: 40px;
+
+  @include m.tablet {
+    padding-top: 60px;
+  }
 }
 
 .tours__heading {
   margin-bottom: 39px;
+
+  @include m.tablet {
+    margin-bottom: 35px;
+  }
 }
 
 .tours__wrapper {
   margin-bottom: 25px;
+  position: relative;
+}
+
+.tours__swiper-buttons {
+  display: none;
+
+  @include m.tablet {
+    display: flex;
+    justify-content: end;
+    gap: 4px;
+    position: absolute;
+    right: 0;
+    top: -60px;
+  }
 }
 
 .tours__all-link {
@@ -38,6 +60,17 @@
     mask-repeat: no-repeat;
     background-color: v.$primary-color;
     mask-position: center;
+  }
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 3px;
+    gap: 10px;
+  }
+
+  @include m.tablet {
+
   }
 }
 

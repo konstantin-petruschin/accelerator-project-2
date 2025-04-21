@@ -2,15 +2,34 @@
 @use "../common/variables.scss" as v;
 
 .tours-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  display: flex;
   min-height: 416px;
+  width: 290px;
+  margin: 0 auto;
+  position: relative;
+
+  @include m.tablet {
+    width: 330px;
+  }
+
+  @include m.desktop {
+    width: 380px;
+  }
 }
 
 .tours-card__image-wrapper {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
+  position: absolute;
+  z-index: -1;
+  width: 290px;
+  height: 100%;
+
+  @include m.tablet {
+    width: 330px;
+  }
+  
+  @include m.desktop {
+    width: 380px;
+  }
 }
 
 .tours-card__image {
@@ -19,8 +38,6 @@
 }
 
 .tours-card__content {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
   color: v.$white-color-basic;
   display: flex;
   flex-direction: column;
@@ -37,11 +54,17 @@
   justify-content: flex-start;
   gap: 12px 7px;
   flex-wrap: wrap;
+
+  @include m.tablet {
+    justify-content: space-between;
+  }
 }
 
 .tours-card__info-item {
   display: flex;
   align-items: center;
+  font-size: 12px;
+  line-height: 12px;
 }
 
 .tours-card__info-item--location {
@@ -50,6 +73,10 @@
   padding: 6px 13px 6px 16px;
   gap: 9px;
 
+  @include m.tablet {
+    padding-top: 9px;
+    padding-bottom: 8px;
+  }
 
   &::before {
     content: "";
@@ -94,6 +121,10 @@
     mask-size: 16px 16px;
     mask-image: url("/__spritemap#sprite-moon-view");
   }
+
+  @include m.tablet {
+    gap: 14px;
+  }
 }
 
 .tours-card__title {
@@ -122,6 +153,10 @@
   flex-wrap: wrap;
   gap: 8px;
   margin: 0;
+
+  @include m.tablet {
+    gap: 27px;
+  }
 }
 
 .tours-card__name {
@@ -150,7 +185,6 @@
     background-image: url("/__spritemap#sprite-stars-5-view")
   }
 }
-
 
 .tours-card__value {
   padding: 0;

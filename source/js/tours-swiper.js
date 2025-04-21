@@ -15,6 +15,16 @@ export const initToursSlider = () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 18,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
   });
 };
 

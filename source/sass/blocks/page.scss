@@ -25,10 +25,27 @@
   @include m.tablet {
     font-size: 14px;
     line-height: 22px;
-
   }
 }
 
 .page__main {
   flex: 1;
+  background-image: url("/img/background/clouds-mobile-1@1x.webp");
+  background-repeat: no-repeat;
+  background-position: right 0 top 578px;
+  background-size: 141px 595px;
+
+  @media (resolution >= 2dppx) {
+    background-image: url("/img/background/clouds-mobile-1@2x.webp");
+  }
+
+  @include m.tablet {
+    background-position: right 0 top 942px;
+    background-size: 428px 1630px;
+    background-image: url("/img/background/clouds-tablet-1@1x.webp");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("/img/background/clouds-tablet-1@2x.webp");
+    }
+  }
 }
