@@ -186,6 +186,7 @@
   grid-column: 2 / 3;
   font-size: 14px;
   line-height: 20px;
+  transition: color ease 0.3s;
 
   @include m.tablet {
     line-height: 22px;
@@ -195,6 +196,26 @@
   @include m.desktop {
     font-size: 16px;
     line-height: 24px
+  }
+
+  &:hover {
+    color: v.$additional-color-200;
+  }
+
+  &:focus {
+    color: v.$additional-color-basic;
+    outline: none;
+  }
+
+  &:active {
+    color: v.$active-color;
+  }
+
+  &--disabled {
+    background-color: v.$disabled-color;
+    cursor: none;
+    pointer-events: none;
+    outline: none;
   }
 }
 

@@ -6,10 +6,12 @@
 import { toggleMenu } from './mobile-menu';
 import { initPromoSlider } from './promo-swiper';
 import { initToursSlider } from './tours-swiper';
+import { initTrainingSlider } from './training-swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
   toggleMenu();
   initPromoSlider();
   initToursSlider();
+  initTrainingSlider()
 });
 

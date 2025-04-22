@@ -26,7 +26,7 @@
   @include m.tablet {
     width: 330px;
   }
-  
+
   @include m.desktop {
     width: 380px;
   }
@@ -94,6 +94,10 @@
 
 .tours-card__info-item--durarion {
   gap: 16px;
+
+  @include m.desktop {
+    gap: 15px;
+  }
 }
 
 .tours-card__info-item--durarion span {
@@ -125,6 +129,10 @@
   @include m.tablet {
     gap: 14px;
   }
+
+  @include m.desktop {
+    gap: 13px;
+  }
 }
 
 .tours-card__title {
@@ -146,6 +154,10 @@
     bottom: 0;
     left: 0;
   }
+
+  @include m.desktop {
+    width: 235px;
+  }
 }
 
 .tours-card__preview {
@@ -156,6 +168,10 @@
 
   @include m.tablet {
     gap: 27px;
+  }
+
+  @include m.desktop {
+    gap: 52px
   }
 }
 

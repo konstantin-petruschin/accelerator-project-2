@@ -1,0 +1,18 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.training {
+  padding-top: 17px;
+}
+
+.training__heading {
+  margin-bottom: 33px;
+}
+
+.training__container p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 20px
+}

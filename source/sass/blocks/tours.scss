@@ -9,6 +9,11 @@
   @include m.tablet {
     padding-top: 60px;
   }
+
+  @include m.desktop {
+    padding-top: 123px;
+    padding-bottom: 387px;
+  }
 }
 
 .tours__heading {
@@ -17,11 +22,19 @@
   @include m.tablet {
     margin-bottom: 35px;
   }
+
+  @include m.desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .tours__wrapper {
   margin-bottom: 25px;
   position: relative;
+
+  @include m.desktop {
+    margin-bottom: 54px;
+  }
 }
 
 .tours__swiper-buttons {
@@ -34,6 +47,10 @@
     position: absolute;
     right: 0;
     top: -60px;
+  }
+
+  @include m.desktop {
+    top: -88px;
   }
 }
 
@@ -50,6 +67,7 @@
   text-transform: uppercase;
   gap: 8px;
   letter-spacing: 0.55px;
+  transition: color ease 0.3s;
 
   &::after {
     content: "";
@@ -60,6 +78,7 @@
     mask-repeat: no-repeat;
     background-color: v.$primary-color;
     mask-position: center;
+    transition: background-color ease 0.3s;
   }
 
   @include m.tablet {
@@ -69,8 +88,36 @@
     gap: 10px;
   }
 
-  @include m.tablet {
+  &:hover {
+    color: v.$additional-color-200;
 
+    &::after {
+      background-color: v.$additional-color-200;
+    }
+  }
+
+  &:focus {
+    color: v.$additional-color-basic;
+    outline: none;
+
+    &::after {
+      background-color: v.$additional-color-basic;
+    }
+  }
+
+  &:active {
+    color: v.$active-color;
+
+    &::after {
+      background-color: v.$active-color;
+    }
+  }
+
+  &--disabled {
+    background-color: v.$disabled-color;
+    cursor: none;
+    pointer-events: none;
+    outline: none;
   }
 }
 

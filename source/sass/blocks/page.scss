@@ -48,4 +48,14 @@
       background-image: url("/img/background/clouds-tablet-1@2x.webp");
     }
   }
+
+  @include m.desktop {
+    background-position: right 0 top 674px;;
+    background-size: 602px 1630px;
+    background-image: url("/img/background/clouds-desktop-1@1x.webp");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("/img/background/clouds-desktop-1@2x.webp");
+    }
+  }
 }

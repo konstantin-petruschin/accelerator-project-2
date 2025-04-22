@@ -79,8 +79,9 @@
   background-color: v.$additional-color-basic;
   width: 37px;
   height: 35px;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
+  transition: color ease 0.3s;
 
   &::after {
     content: "";
@@ -91,6 +92,35 @@
     background-color: v.$white-color-basic;
     mask-image: url("/__spritemap#sprite-next-view");
     mask-size: 14px 9px;
+    transition: background-color ease 0.3s;
+  }
+
+  &:hover {
+    border-color: v.$active-color;
+    background-color: v.$white-color-basic;
+
+    &::after {
+      background-color: v.$active-color;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border-color: v.$white-color-basic;
+    background-color: v.$white-color-basic;
+
+    &::after {
+      background-color: v.$active-color;
+    }
+
+    &:active {
+      border-color: v.$active-color;
+      background-color: v.$active-color;
+
+      &::after {
+        background-color: v.$white-color-basic;
+      }
+    }
   }
 }
 

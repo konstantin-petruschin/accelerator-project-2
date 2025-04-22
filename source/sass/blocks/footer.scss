@@ -26,6 +26,24 @@
 .footer__logo svg {
   color: v.$primary-color;
   display: block;
+  transition: color ease 0.3px;
+}
+
+.footer__logo:hover svg {
+  color: v.$additional-color-200;
+}
+
+.footer__logo:focus svg {
+  color: v.$additional-color-basic;
+}
+
+.footer__logo:active svg {
+  color: v.$active-color;
+}
+
+.footer__logo:not([href]) svg {
+  color: v.$disabled-color;
+  pointer-events: none;
 }
 
 .footer__navigation {
@@ -114,6 +132,7 @@
 }
 
 .footer__nav-link {
+  position: relative;
   color: v.$primary-color;
   text-decoration: none;
   font-size: 14px;
@@ -126,6 +145,46 @@
     padding-right: 10px;
     font-size: 16px;
     line-height: 16px;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: v.$primary-color;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    opacity: 0;
+    transition: opacity ease 0.3s;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: 1px solid v.$primary-color;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &:active {
+    outline: none;
+    color: v.$additional-color-basic;
+  }
+
+  &--disabled {
+    color: v.$disabled-color;
+    cursor: none;
+    pointer-events: none;
+    outline: none;
   }
 }
 
@@ -142,6 +201,28 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 18px;
+    transition: color ease 0.3s;
+  }
+
+  &:hover {
+    color: v.$additional-color-200;
+  }
+
+  &:focus {
+    color: v.$additional-color-basic;
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+    color: v.$active-color;
+  }
+
+  &--disabled {
+    background-color: v.$disabled-color;
+    cursor: none;
+    pointer-events: none;
+    outline: none;
   }
 }
 
@@ -174,6 +255,7 @@
   height: 30px;
   border: 1px solid v.$stroke-br-color;
   text-decoration: none;
+  transition: color ease 0.3s, border-color ease 0.3s, background-color ease 0.3s;
 
   &::before {
     display: block;
@@ -183,6 +265,7 @@
     mask-repeat: no-repeat;
     mask-position: center;
     background-color: #030a1a;
+    transition: background-color ease 0.3s;
   }
 
   &--vk::before {
@@ -199,11 +282,40 @@
     mask-image: url("/__spritemap#sprite-reddit-view");
     mask-size: 14px 15px;
   }
+
+  &:hover {
+    border-color: v.$primary-color
+  }
+
+  &:focus {
+    outline: none;
+    border-color: transparent;
+  }
+
+  &:active {
+    background-color: v.$additional-color-basic;
+
+    &::before {
+      background-color: v.$white-color-basic;
+    }
+  }
+
+  &--disabled {
+    border-color: v.$disabled-color;
+    cursor: none;
+    pointer-events: none;
+    outline: none;
+
+    &::before {
+      background-color: v.$disabled-color;
+    }
+  }
 }
 
 .footer__privacy-policy {
   color: v.$primary-color;
   text-decoration: none;
+  transition: color ease 0.3s;
 
   @include m.tablet {
     grid-column: 1 / 3;
@@ -214,5 +326,25 @@
 
   @include m.desktop {
     grid-column: 2 / 3;
+  }
+
+  &:hover {
+    color: v.$additional-color-200;
+  }
+
+  &:focus {
+    color: v.$additional-color-basic;
+    outline: none;
+  }
+
+  &:active {
+    color: v.$active-color;
+  }
+
+  &--disabled {
+    background-color: v.$disabled-color;
+    cursor: none;
+    pointer-events: none;
+    outline: none;
   }
 }
