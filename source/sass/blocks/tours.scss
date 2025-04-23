@@ -4,15 +4,16 @@
 
 .tours {
   padding-top: 39px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 
   @include m.tablet {
     padding-top: 60px;
+    padding-bottom: 40px;
   }
 
   @include m.desktop {
     padding-top: 123px;
-    padding-bottom: 387px;
+    padding-bottom: 102px;
   }
 }
 

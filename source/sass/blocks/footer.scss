@@ -26,7 +26,7 @@
 .footer__logo svg {
   color: v.$primary-color;
   display: block;
-  transition: color ease 0.3px;
+  transition: color ease 0.3s;
 }
 
 .footer__logo:hover svg {
@@ -264,7 +264,7 @@
     height: 100%;
     mask-repeat: no-repeat;
     mask-position: center;
-    background-color: #030a1a;
+    background-color: v.$dark-color;
     transition: background-color ease 0.3s;
   }
 

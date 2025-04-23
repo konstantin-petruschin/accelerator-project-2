@@ -23,6 +23,7 @@ export const initToursSlider = () => {
       1440: {
         slidesPerView: 3,
         spaceBetween: 30,
+        allowTouchMove: false,
       },
     },
   });
