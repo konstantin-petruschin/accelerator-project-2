@@ -13,7 +13,10 @@
   @include m.tablet {
     padding: 15px 14px;
     min-height: 388px;
+  }
 
+  @include m.desktop {
+    min-height: 356px;
   }
 }
 
@@ -23,6 +26,10 @@
 
   @include m.tablet {
     margin-bottom: 16px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 15px;
   }
 }
 

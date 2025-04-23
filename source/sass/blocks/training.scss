@@ -6,6 +6,26 @@
 
   @include m.tablet {
     padding-top: 60px;
+    background-position: right 0 top 614px;
+    background-size: 464px 280px;
+    background-image: url("/img/background/clouds-tablet-2@1x.webp");
+    background-repeat: no-repeat;
+
+    @media (resolution >= 2dppx) {
+      background-image: url("/img/background/clouds-tablet-2@2x.webp");
+    }
+  }
+
+  @include m.desktop {
+    padding-top: 62px;
+    padding-bottom: 40px;
+    background-position: right 0 top 610px;
+    background-size: 631px 280px;
+    background-image: url("/img/background/clouds-desktop-2@1x.webp");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("/img/background/clouds-desktop-2@2x.webp");
+    }
   }
 }
 
@@ -14,6 +34,10 @@
 
   @include m.tablet {
     margin-bottom: 34px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 32px;
   }
 }
 
@@ -32,6 +56,7 @@
 
   @include m.desktop {
     max-width: 875px;
+    margin-bottom: 62px;
   }
 }
 
@@ -41,6 +66,10 @@
   @include m.tablet {
     margin-bottom: 37px;
   }
+
+  @include m.desktop {
+    margin-bottom: 16px;
+  }
 }
 
 .training__card {
@@ -48,6 +77,10 @@
 
   @include m.tablet {
     width: 212px;
+  }
+
+  @include m.desktop {
+    width: 285px;
   }
 }
 
@@ -57,6 +90,10 @@
 
   @include m.tablet {
     margin-bottom: 26px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 57px;
   }
 }
 
@@ -73,6 +110,12 @@
     font-size: 18px;
     line-height: 18px;
     margin-bottom: 101px;
+  }
+
+  @include m.desktop {
+    font-size: 21px;
+    line-height: 21px;
+    margin-bottom: 26px;
   }
 }
 
@@ -91,10 +134,20 @@
     gap: 103px 131px;
   }
 
+  @include m.desktop {
+    padding-left: 10px;
+    padding-bottom: 9px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+  }
+
   &::before {
     content: "";
     position: absolute;
     width: 2px;
+    display: block;
     height: calc(100% - 24px);
     top: 50%;
     left: 6px;
@@ -103,6 +156,14 @@
 
     @include m.tablet {
       display: none;
+    }
+
+    @include m.desktop {
+      display: block;
+      width: calc(100% - 30px);
+      height: 2px;
+      top: 100%;
+      left: 30px;
     }
   }
 }
@@ -115,6 +176,15 @@
   @include m.tablet {
     line-height: 22px;
     text-wrap: balance;
+  }
+
+  @include m.desktop {
+    max-width: 233px;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: flex-start;
+    text-wrap: unset;
+    position: relative;
   }
 
   &::before {
@@ -132,6 +202,13 @@
     @include m.tablet {
       display: none;
     }
+
+    @include m.desktop {
+      display: inline-block;
+      position: absolute;
+      bottom: -16px;
+      left: 10px;
+    }
   }
 
   &::after {
@@ -147,6 +224,10 @@
     margin-right: 9px;
     align-self: flex-start;
     background-color: v.$primary-color;
+
+    @include m.desktop {
+      margin-top: 3px;
+    }
   }
 
   &--movement {
@@ -183,6 +264,8 @@
   }
 
   &--complexity {
+    text-wrap: balance;
+
     &::after {
       mask-image: url("/__spritemap#sprite-mountain-view");
     }
@@ -190,7 +273,14 @@
     @include m.tablet {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
+      text-wrap: unset;
     }
+  }
+}
+
+.training__process-item--ecology::before {
+  @include m.desktop {
+    left: -9px;
   }
 }
 
@@ -207,6 +297,6 @@
   }
 
   @include m.desktop {
-    top: -64px;
+    top: -55px;
   }
 }

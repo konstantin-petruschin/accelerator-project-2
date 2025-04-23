@@ -25,6 +25,7 @@ export const initTrainingSlider = () => {
         slidesPerView: 4,
         spaceBetween: 20,
         allowTouchMove: false,
+        initialSlide: 0,
       },
     },
   });
