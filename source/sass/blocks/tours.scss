@@ -43,7 +43,7 @@
 
   @include m.tablet {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 4px;
     position: absolute;
     right: 0;

@@ -7,6 +7,7 @@
 
   @include m.tablet {
     padding-top: 60px;
+    padding-bottom: 42px;
     background-position: right 0 top 614px;
     background-size: 464px 280px;
     background-image: url("/img/background/clouds-tablet-2@1x.webp");
@@ -19,7 +20,7 @@
 
   @include m.desktop {
     padding-top: 62px;
-    padding-bottom: 40px;
+    padding-bottom: 56px;
     background-position: right 0 top 610px;
     background-size: 631px 280px;
     background-image: url("/img/background/clouds-desktop-2@1x.webp");
@@ -274,7 +275,10 @@
     @include m.tablet {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      text-wrap: unset;
+
+      @include m.desktop {
+        text-wrap: unset;
+      }
     }
   }
 }
@@ -290,7 +294,7 @@
 
   @include m.tablet {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 4px;
     position: absolute;
     right: 0;
