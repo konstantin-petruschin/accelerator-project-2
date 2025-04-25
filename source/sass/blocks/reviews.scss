@@ -1,0 +1,63 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.reviews {
+  padding-top: 37px;
+  padding-bottom: 20px;
+  overflow: hidden;
+
+  @include m.tablet {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @include m.desktop {
+    padding-top: 145px;
+    padding-bottom: 87px;
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+
+  @include m.desktop {
+    margin-left: 10px;
+  }
+}
+
+.reviews__heading {
+  margin-bottom: 31px;
+
+  @include m.tablet {
+    margin-bottom: 35px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 38px;
+  }
+}
+
+.reviews__swiper-buttons {
+  position: absolute;
+  top: -60px;
+  right: 0;
+
+  @include m.desktop {
+    top: -70px;
+  }
+}
+
+.reviews__card  {
+  width: 290px;
+  min-height: 484px;
+
+  @include m.tablet {
+    width: 565px;
+    min-height: 277px;
+  }
+
+  @include m.desktop {
+    width: 700px;
+    min-height: 293px;
+  }
+}

@@ -50,12 +50,14 @@
   }
 
   @include m.desktop {
-    background-position: right 0 top 674px;;
-    background-size: 602px 1630px;
-    background-image: url("/img/background/clouds-desktop-1@1x.webp");
+    background-image: url("/img/background/clouds-desktop-1@1x.webp"), url("/img/background/clouds-desktop-3@1x.webp");
+    background-position: right 0 top 674px, left 0 top 3517px;
+    background-size: 602px 1630px, 100% 447px;
+    background-repeat: no-repeat;
 
     @media (resolution >= 2dppx) {
-      background-image: url("/img/background/clouds-desktop-1@2x.webp");
+      background-image:
+        url("/img/background/clouds-desktop-1@2x.webp"), url("/img/background/clouds-desktop-3@2x.webp");
     }
   }
 }

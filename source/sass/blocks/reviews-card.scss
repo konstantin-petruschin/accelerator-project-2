@@ -1,0 +1,96 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.reviews-card {
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 17px;
+  background-color: v.$white-color-basic;
+  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 186px auto;
+    gap: 29px;
+  }
+
+  @include m.desktop {
+    grid-template-columns: 258px auto;
+  }
+}
+
+.reviews-card__image-wrapper {
+  margin-bottom: 19px;
+
+  @include m.tablet {
+    margin: 0;
+ }
+}
+
+.reviews-card__image {
+  display: block;
+}
+
+.reviews-card__content {
+  @include m.tablet {
+    margin-top: 3px;
+  }
+
+  @include m.desktop {
+    margin-top: 0;
+  }
+}
+
+
+.reviews-card__content p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+  @include m.tablet {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @include m.desktop {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+}
+
+.reviews-card__content p + p {
+  margin-bottom: 16px;
+
+  @include m.tablet {
+    margin-bottom: 27px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 4px;
+  }
+}
+
+.reviews-card__content h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+
+  @include m.tablet {
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 1px;
+  }
+}
+
+.reviews-card__content span {
+  font-weight: 300;
+
+  @include m.tablet {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}

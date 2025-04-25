@@ -21,6 +21,10 @@
   position: relative;
 }
 
+.reviews-swiper {
+  overflow: visible;
+}
+
 .swiper-pagination {
   background-color: transparent;
   display: flex;
@@ -71,6 +75,17 @@
 
 .swiper-pagination-bullet-active {
   background-color: v.$white-color-basic;
+}
+
+.swiper-buttons {
+  display: none;
+
+  @include m.tablet {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+
 }
 
 .swiper-button-prev,

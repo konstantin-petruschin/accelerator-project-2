@@ -290,12 +290,7 @@
 }
 
 .training__swiper-buttons {
-  display: none;
-
   @include m.tablet {
-    display: flex;
-    justify-content: flex-end;
-    gap: 4px;
     position: absolute;
     right: 0;
     top: -64px;

@@ -3,9 +3,11 @@
 
 .about {
   padding-top: 20px;
+  padding-bottom: 20px;
 
   @include m.tablet {
     padding-top: 61px;
+    padding-bottom: 41px;
     display: grid;
     grid-template-columns: 450px auto;
   }
@@ -133,6 +135,10 @@
     margin-bottom: 30px;
     width: calc(100% - 77px);
   }
+}
+
+.about__container p:last-of-type {
+  margin-bottom: 0;
 }
 
 .about__container p br {

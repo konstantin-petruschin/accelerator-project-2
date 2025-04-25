@@ -17,11 +17,13 @@ export const initReviewsSlider = () => {
     breakpoints: {
       768: {
         slidesPerView: 2,
-        spaceBetween: 18,
+        slidesPerView: 1.2,
+        spaceBetween: 36,
       },
       1440: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 1.693,
+        spaceBetween: 198,
         allowTouchMove: false,
       },
     },
