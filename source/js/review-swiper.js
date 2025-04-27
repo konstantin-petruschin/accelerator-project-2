@@ -11,17 +11,15 @@ export const initReviewsSlider = () => {
     watchOverflow: true,
     simulateTouch: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.reviews__swiper-buttons .swiper-button-next',
+      prevEl: '.reviews__swiper-buttons .swiper-button-prev',
     },
     breakpoints: {
       768: {
-        slidesPerView: 2,
         slidesPerView: 1.2,
         spaceBetween: 36,
       },
       1440: {
-        slidesPerView: 3,
         slidesPerView: 1.693,
         spaceBetween: 198,
         allowTouchMove: false,

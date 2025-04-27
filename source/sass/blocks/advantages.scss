@@ -1,2 +1,186 @@
 @use "../mixins/media.scss" as m;
 @use "../common/variables.scss" as v;
+
+.advantages {
+  padding-top: 37px;
+
+  @include m.tablet {
+    padding-top: 60px;
+    background-image: url("/img/background/clouds-tablet-3@1x.webp");
+    background-repeat: no-repeat;
+    background-position: left 0 top 168px;
+    background-size: 100% 996px;
+
+    @media (resolution >= 2dppx) {
+      background-image: url("/img/background/clouds-tablet-3@2x.webp");
+    }
+  }
+
+  @include m.desktop {
+    background-image: none;
+    overflow: hidden;
+    padding-top: 135px;
+  }
+}
+
+.advantages__container {
+  @include m.desktop {
+    max-width: none;
+    padding: 0;
+  }
+
+}
+
+.advantages__heading {
+  text-align: center;
+  margin-bottom: 36px;
+
+  @include m.tablet {
+    margin-bottom: 61px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 50px;
+  }
+
+  &::before {
+    transform: translateX(-50%);
+    left: 50%;
+
+    @include m.desktop {
+      top: -19px;
+    }
+  }
+}
+
+.advantages__wrapper {
+
+  @include m.desktop {
+    margin-left: 60px;
+  }
+}
+
+.advantages__swiper {
+  @include m.desktop {
+    margin-bottom: 50px;
+  }
+}
+
+.advantages__card {
+  padding: 19px 8px;
+  border: 1px solid v.$additional-color-200;
+  background-color: v.$white-color-basic;
+
+  @include m.tablet {
+    width: 324px;
+    min-height: 340px;
+    padding: 28px 19px;
+  }
+
+  @include m.desktop {
+    padding-top: 39px;
+    padding-bottom: 38px;
+    width: 380px;
+    min-height: 329px;
+  }
+}
+
+.advantages__card h3 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+
+  @include m.tablet {
+    gap: 28px;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 14px;
+  }
+
+  @include m.desktop {
+    font-size: 18px;
+    line-height: 18px;
+    gap: 30px;
+  }
+}
+
+.advantages__card h3::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  display: block;
+  border: 1px solid v.$additional-color-basic;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include m.tablet {
+    width: 46px;
+    height: 46px;
+  }
+
+  @include m.desktop {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+.advantages__card h3 br {
+  @include m.desktop {
+    display: none;
+  }
+}
+
+.advantages__card--safety h3::before {
+  background-image: url("/__spritemap#sprite-level-icon-view");
+  background-size: 24px 22px;
+}
+
+.advantages__card--expertise h3::before {
+  background-image: url("/__spritemap#sprite-crown-icon-view");
+  background-size: 24px 22px;
+}
+
+.advantages__card--equipment h3::before {
+  background-image: url("/__spritemap#sprite-boots-view");
+  background-size: 24px 22px;
+}
+
+.advantages__card--route h3::before {
+  background-image: url("/__spritemap#sprite-route-icon-view");
+  background-size: 24px 22px;
+}
+
+.advantages__card--eco h3::before {
+  background-image: url("/__spritemap#sprite-leaf-icon-view");
+  background-size: 24px 18px;
+}
+
+.advantages__card p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.advantages__card p br {
+  @include m.tablet {
+    display: none;
+  }
+}
+
+.advantages__swiper-buttons {
+  display: none;
+
+  @include m.desktop {
+    display: flex;
+    justify-content: center;
+    margin-left: -61px;
+  }
+}

@@ -12,8 +12,8 @@ export const initToursSlider = () => {
     watchOverflow: true,
     simulateTouch: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.tours__swiper-buttons .swiper-button-next',
+      prevEl: '.tours__swiper-buttons .swiper-button-prev',
     },
     breakpoints: {
       768: {

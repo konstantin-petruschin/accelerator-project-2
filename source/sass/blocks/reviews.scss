@@ -3,12 +3,12 @@
 
 .reviews {
   padding-top: 37px;
-  padding-bottom: 20px;
+  padding-bottom: 3px;
   overflow: hidden;
 
   @include m.tablet {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
   }
 
   @include m.desktop {

@@ -8,6 +8,7 @@ import { initPromoSlider } from './promo-swiper';
 import { initToursSlider } from './tours-swiper';
 import { initTrainingSlider } from './training-swiper';
 import { initReviewsSlider } from './review-swiper';
+import { initAdvantagesSlider } from './advantages-swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
   toggleMenu();
@@ -15,5 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initToursSlider();
   initTrainingSlider();
   initReviewsSlider();
+  initAdvantagesSlider();
 });
 

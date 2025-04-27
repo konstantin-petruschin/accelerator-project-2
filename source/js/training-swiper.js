@@ -10,10 +10,9 @@ export const initTrainingSlider = () => {
     slidesPerView: 1,
     spaceBetween: 40,
     watchOverflow: true,
-    // simulateTouch: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.training__swiper-buttons .swiper-button-next',
+      prevEl: '.training__swiper-buttons .swiper-button-prev',
     },
     breakpoints: {
       768: {
