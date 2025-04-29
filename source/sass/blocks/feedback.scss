@@ -1,0 +1,144 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.feedback {
+  padding-top: 177px;
+  padding-bottom: 176px;
+  min-height: 638px;
+  background-image: url("/img/feedback/form-mobile@1x.webp");
+  background-repeat: no-repeat;
+  background-position: left -33px top 0;
+  background-size: 121% 100%;
+
+  @media (resolution >= 2dppx) {
+    background-image: url("/img/feedback/form-mobile@2x.webp");
+  }
+
+  @include m.tablet {
+    padding-top: 187px;
+    padding-bottom: 183px;
+    background-image: url("/img/feedback/form-tablet@1x.webp");
+    background-position: left 0px bottom -1px;
+    background-size: 100% 100%;
+
+    @media (resolution >= 2dppx) {
+      background-image: url("/img/feedback/form-tablet@2x.webp");
+    }
+  }
+}
+
+.feedback__container {
+  color: v.$white-color-basic;
+  text-align: center;
+  padding-left: 31px;
+  padding-right: 31px;
+
+  @include m.tablet {
+    padding-left: 204px;
+    padding-right: 204px;
+  }
+}
+
+.feedback__container h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 17px;
+
+  @include m.tablet {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 23px;
+  }
+}
+
+.feedback__container p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 18px;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    margin-left: -2px;
+  }
+}
+
+.feedback__container p br {
+  @include m.tablet {
+    display: none;
+  }
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include m.tablet {
+    gap: 11px;
+  }
+}
+
+.feedback__form-label {
+  cursor: pointer;
+  display: grid;
+}
+
+.feedback__form-label:focus-within .feedback__form-name {
+  opacity: 0;
+  transition: opacity ease 0.3s;
+}
+
+.feedback__form-label:has(.feedback__form-input:not(:placeholder-shown)) .feedback__form-name {
+  opacity: 0;
+  transition: opacity ease 0.3s;
+}
+
+.feedback__form-name,
+.feedback__form-input {
+  display: block;
+  padding: 18px 15px 13px;
+  grid-area: 1 / 1;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 19px 30px 16px;
+  }
+}
+
+.feedback__form-name {
+  z-index: 1;
+  color: rgba(v.$primary-color, 0.5);
+}
+
+.feedback__form-input {
+  color: v.$primary-color;
+  border: 0px solid v.$additional-color-200;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &::placeholder {
+    color: rgba(v.$primary-color, 0.5);
+    opacity: 0;
+    transition: opacity ease 0.3s;
+  }
+
+  &:focus-within::placeholder {
+
+  }
+
+  @include m.tablet {
+    border: 1px solid v.$additional-color-200;
+  }
+}

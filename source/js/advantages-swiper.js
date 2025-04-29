@@ -18,6 +18,9 @@ export const initAdvantagesSlider = () => {
       slidesPerGroup: 2,
       initialSlide: 1,
       allowTouchMove: false,
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true
     });
   }
 };
