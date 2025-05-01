@@ -23,8 +23,7 @@
 
 .about__container {
   @include m.tablet {
-    margin: 0;
-    max-width: none;
+    max-width: 900px;
     min-width: unset;
     padding-left: 0;
   }
