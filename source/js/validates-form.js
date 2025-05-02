@@ -2,39 +2,37 @@ const form = document.querySelector('#feedback-form');
 const phoneInput = form.querySelector('#input-phone');
 const emailInput = form.querySelector('#input-email');
 
+const PHONE_REGEX = /^[\d\s\-()+]*$/;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAIL_ADDITIONAL_REGEX = /^[a-zA-Z0-9_.+-ёЁа-яА-Я@]+$/;
+
 form.setAttribute('novalidate', true);
 
+let wasSubmitted = false;
+
 const validateField = (input, validationFn, errorMessage) => {
+  const isEmpty = input.value.trim() === '';
+  const isValid = !isEmpty && validationFn(input.value.trim());
 
-  if (input.value.trim() === '') {
-    input.setCustomValidity('Это поле обязательно для заполнения');
-    input.classList.add('feedback__form-input--error');
-    input.reportValidity();
-    return false;
-  }
-
-  if (!validationFn(input.value)) {
-    input.setCustomValidity(errorMessage);
+  if (!isValid && wasSubmitted) {
+    input.setCustomValidity(isEmpty
+      ? 'Это поле обязательно для заполнения'
+      : errorMessage);
     input.classList.add('feedback__form-input--error');
     input.reportValidity();
     return false;
   }
 
   input.setCustomValidity('');
-  input.classList.remove('feedback__form-input--error');
-  return true;
-};
-
-const handleInput = ({ target }) => {
-  if (target === phoneInput) {
-    validateField(phoneInput, isValidPhone, 'Поле не должно содержать буквы.');
-  } else if (target === emailInput) {
-    validateField(emailInput, isValidEmail, 'Пожалуйста, введите корректный email. Например: имя@домен.рф');
+  if (isValid) {
+    input.classList.remove('feedback__form-input--error');
   }
+  return true;
 };
 
 const handleSubmit = (evt) => {
   evt.preventDefault();
+  wasSubmitted = true;
 
   const isPhoneValid = validateField(
     phoneInput,
@@ -53,17 +51,38 @@ const handleSubmit = (evt) => {
   }
 };
 
-const isValidPhone = (phone) => /^[\d\-()+]*$/.test(phone);
+const isValidPhone = (phone) => PHONE_REGEX.test(phone);
 
 const isValidEmail = (email) =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) &&
-  /^[a-zA-Z0-9_.+-ёЁа-яА-Я@\-.]+$/.test(email);
+  EMAIL_REGEX.test(email) &&
+  EMAIL_ADDITIONAL_REGEX.test(email);
 
 const validatesForm = () => {
   if (!form) return;
 
+  phoneInput.setCustomValidity('');
+  emailInput.setCustomValidity('');
+
   form.addEventListener('submit', handleSubmit);
-  form.addEventListener('input', handleInput);
+  phoneInput.addEventListener('input', () => {
+    if (wasSubmitted) {
+      validateField(
+        phoneInput,
+        isValidPhone,
+        'Поле не должно содержать буквы.'
+      );
+    }
+  });
+
+  emailInput.addEventListener('input', () => {
+    if (wasSubmitted) {
+      validateField(
+        emailInput,
+        isValidEmail,
+        'Пожалуйста, введите корректный email. Например: имя@домен.рф'
+      );
+    }
+  });
 };
 
 export { validatesForm };

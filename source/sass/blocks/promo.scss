@@ -1,6 +1,10 @@
 @use "../mixins/media.scss" as m;
 @use "../common/variables.scss" as v;
 
+.promo {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0.6) 100%);
+}
+
 .promo__card {
   display: grid;
   grid-template-columns: 1fr;

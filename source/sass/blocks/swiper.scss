@@ -26,6 +26,14 @@
   overflow: visible;
 }
 
+.gallery-swiper .swiper-slide {
+
+  @include m.desktop {
+    max-width: 284px;
+    width: 100%;
+  }
+}
+
 .swiper-pagination {
   background-color: transparent;
   display: flex;
