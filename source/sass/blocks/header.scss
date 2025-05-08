@@ -114,13 +114,22 @@
     margin-left: 32px;
     justify-self: unset;
   }
+
+  &[aria-current="page"] {
+    pointer-events: none;
+    cursor: none;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
 }
 
 .header__logo svg {
   width: 142px;
   height: 42px;
   display: block;
-  color: v.$white-color-basic
+  color: v.$white-color-basic;
 }
 
 .header__phone-link {
@@ -145,7 +154,7 @@
   }
 
   &:hover {
-    color: v.$white-color-500
+    color: v.$white-color-500;
   }
 
   &:focus {

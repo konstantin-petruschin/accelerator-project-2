@@ -121,6 +121,12 @@
 }
 
 .promo__photo-wrapper {
+  display: none;
+
+  @include m.tablet {
+    display: block;
+  }
+
   @include m.desktop {
     position: absolute;
     top: 187px;
@@ -152,15 +158,6 @@
   }
 }
 
-.promo__photo-wrapper {
-  display: none;
-
-  @include m.tablet {
-    display: block;
-  }
-}
-
-
 .promo__tour-preview {
   display: none;
 
@@ -188,7 +185,6 @@
     display: block;
     width: 12px;
     height: 12px;
-    mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 12px 12px;
     background-color: v.$white-color-basic;

@@ -3,7 +3,6 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
-
 export const initToursSlider = () => {
   new Swiper('.tours-swiper', {
     modules: [Navigation],
@@ -23,9 +22,7 @@ export const initToursSlider = () => {
       1440: {
         slidesPerView: 3,
         spaceBetween: 30,
-        allowTouchMove: false,
       },
     },
   });
 };
-

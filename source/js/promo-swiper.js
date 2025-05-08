@@ -18,7 +18,7 @@ export const initPromoSlider = () => {
     on: {
       slideChange: function () {
         const activeIndex = this.activeIndex;
-        const bullets = document.querySelectorAll('.promo .swiper-pagination-bullet')
+        const bullets = document.querySelectorAll('.promo .swiper-pagination-bullet');
 
         bullets.forEach((bullet, index) => {
           bullet.setAttribute('tabindex', '0');
@@ -32,7 +32,7 @@ export const initPromoSlider = () => {
         const promoLinks = document.querySelectorAll('.promo__link');
         promoLinks.forEach((btn) => btn.setAttribute('tabindex', '-1'));
         if(promoLinks[activeIndex]) {
-          promoLinks[activeIndex].tabIndex = "0"
+          promoLinks[activeIndex].tabIndex = '0';
         }
       }
     },
@@ -43,4 +43,4 @@ export const initPromoSlider = () => {
       },
     },
   });
-}
+};

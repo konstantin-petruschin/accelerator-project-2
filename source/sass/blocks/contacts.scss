@@ -195,7 +195,7 @@
 
   @include m.desktop {
     font-size: 16px;
-    line-height: 24px
+    line-height: 24px;
   }
 
   &:hover {
@@ -234,11 +234,12 @@
 
   @include m.desktop {
     font-size: 16px;
-    line-height: 24px
+    line-height: 24px;
   }
 }
 
-.contacts__map-wrapper {
+.contacts__map-wrapper,
+.contacts__map-image {
   max-height: 343px;
 
   @include m.tablet {
@@ -246,11 +247,15 @@
   }
 
   @include m.desktop {
-    padding-top: 26px;
+    max-height: 324px;
   }
+}
+
+.contacts__map-wrapper {
+  margin-top: 26px;
+  background-color: v.$dark-color;
 }
 
 .contacts__map-image {
   display: block;
-  height: revert-layer;
 }

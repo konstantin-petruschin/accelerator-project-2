@@ -10,6 +10,12 @@ form.setAttribute('novalidate', true);
 
 let wasSubmitted = false;
 
+const isValidPhone = (phone) => PHONE_REGEX.test(phone);
+
+const isValidEmail = (email) =>
+  EMAIL_REGEX.test(email) &&
+  EMAIL_ADDITIONAL_REGEX.test(email);
+
 const validateField = (input, validationFn, errorMessage) => {
   const isEmpty = input.value.trim() === '';
   const isValid = !isEmpty && validationFn(input.value.trim());
@@ -34,13 +40,13 @@ const handleSubmit = (evt) => {
   evt.preventDefault();
   wasSubmitted = true;
 
-  const isPhoneValid = validateField(
+  const isPhoneValid = validateField (
     phoneInput,
     isValidPhone,
     'Поле не должно содержать буквы.'
   );
 
-  const isEmailValid = validateField(
+  const isEmailValid = validateField (
     emailInput,
     isValidEmail,
     'Пожалуйста, введите корректный email. Например: имя@домен.рф'
@@ -51,14 +57,10 @@ const handleSubmit = (evt) => {
   }
 };
 
-const isValidPhone = (phone) => PHONE_REGEX.test(phone);
-
-const isValidEmail = (email) =>
-  EMAIL_REGEX.test(email) &&
-  EMAIL_ADDITIONAL_REGEX.test(email);
-
 const validatesForm = () => {
-  if (!form) return;
+  if (!form) {
+    return;
+  }
 
   phoneInput.setCustomValidity('');
   emailInput.setCustomValidity('');

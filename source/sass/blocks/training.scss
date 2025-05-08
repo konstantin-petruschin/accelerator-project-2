@@ -231,54 +231,55 @@
       margin-top: 3px;
     }
   }
+}
 
-  &--movement {
-    &::after {
-      mask-image: url("/__spritemap#sprite-map-view");
-    }
 
-    @include m.tablet {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-    }
+.training__process-item--movement {
+  &::after {
+    mask-image: url("/__spritemap#sprite-map-view");
   }
 
-  &--equipment {
-    &::after {
-      mask-image: url("/__spritemap#sprite-boots-view");
-    }
+  @include m.tablet {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
 
-    @include m.tablet {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-    }
+.training__process-item--equipment {
+  &::after {
+    mask-image: url("/__spritemap#sprite-boots-view");
   }
 
-  &--ecology {
-    &::after {
-      mask-image: url("/__spritemap#sprite-pine-tree-view");
-    }
+  @include m.tablet {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}
 
-    @include m.tablet {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-    }
+.training__process-item--ecology {
+  &::after {
+    mask-image: url("/__spritemap#sprite-pine-tree-view");
   }
 
-  &--complexity {
-    text-wrap: balance;
+  @include m.tablet {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+}
 
-    &::after {
-      mask-image: url("/__spritemap#sprite-mountain-view");
-    }
+.training__process-item--complexity {
+  text-wrap: balance;
 
-    @include m.tablet {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
+  &::after {
+    mask-image: url("/__spritemap#sprite-mountain-view");
+  }
 
-      @include m.desktop {
-        text-wrap: unset;
-      }
+  @include m.tablet {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    @include m.desktop {
+      text-wrap: unset;
     }
   }
 }

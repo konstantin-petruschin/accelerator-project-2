@@ -1,7 +1,6 @@
 const mobileMenu = document.querySelector('.header__nav');
 const menuToggleButton = document.querySelector('.header__button-menu');
 const menuLinks = document.querySelectorAll('.header__nav a');
-const menuOverlay = document.querySelector('.page__main')
 
 mobileMenu.classList.remove('header__nav--open');
 menuToggleButton.classList.remove('header__button-menu--open');
@@ -13,9 +12,9 @@ const toggleMenu = () => {
   document.body.style.overflow = isMenuOpen ? 'hidden' : '';
 
   if (isMenuOpen) {
-    document.body.classList.add('page__main--menu-open');
+    document.body.classList.add('page__body--menu-open');
   } else {
-    document.body.classList.remove('page__main--menu-open');
+    document.body.classList.remove('page__body--menu-open');
   }
 
   menuToggleButton.setAttribute('aria-expanded', isMenuOpen);
@@ -25,7 +24,7 @@ const toggleMenu = () => {
 const initMenu = () => {
   menuToggleButton.addEventListener('click', toggleMenu);
 
-  menuLinks.forEach(link => {
+  menuLinks.forEach((link) => {
     link.addEventListener('click', () => {
       if (mobileMenu.classList.contains('header__nav--open')) {
         toggleMenu();

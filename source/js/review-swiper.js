@@ -22,7 +22,6 @@ export const initReviewsSlider = () => {
       1440: {
         slidesPerView: 1.693,
         spaceBetween: 198,
-        allowTouchMove: false,
       },
     },
   });

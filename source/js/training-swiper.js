@@ -23,10 +23,8 @@ export const initTrainingSlider = () => {
       1440: {
         slidesPerView: 4,
         spaceBetween: 20,
-        allowTouchMove: false,
         initialSlide: 0,
       },
     },
   });
 };
-

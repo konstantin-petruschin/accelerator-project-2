@@ -37,6 +37,10 @@
   color: v.$additional-color-basic;
 }
 
+.footer__logo:focus {
+  outline: none;
+}
+
 .footer__logo:active svg {
   color: v.$active-color;
 }
@@ -89,9 +93,9 @@
   gap: 0 50px;
   justify-content: center;
   grid-template-areas:
-    "tours reviews"
+    "tours    reviews"
     "training photos"
-    "about contacts";
+    "about    contacts";
   text-align: center;
 
   @include m.tablet {
@@ -284,7 +288,7 @@
   }
 
   &:hover {
-    border-color: v.$primary-color
+    border-color: v.$primary-color;
   }
 
   &:focus {
@@ -299,16 +303,16 @@
       background-color: v.$white-color-basic;
     }
   }
+}
 
-  &--disabled {
-    border-color: v.$disabled-color;
-    cursor: none;
-    pointer-events: none;
-    outline: none;
+.footer__social-link--disabled {
+  border-color: v.$disabled-color;
+  cursor: none;
+  pointer-events: none;
+  outline: none;
 
-    &::before {
-      background-color: v.$disabled-color;
-    }
+  &::before {
+    background-color: v.$disabled-color;
   }
 }
 

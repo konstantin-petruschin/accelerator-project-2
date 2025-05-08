@@ -19,12 +19,28 @@
   }
 }
 
+.reviews-card__image,
+.reviews-card__image-wrapper {
+  max-height: 169px;
+
+  @include m.tablet {
+    margin: 0;
+    max-height: 237px;
+    width: 186px;
+  }
+
+  @include m.desktop {
+    max-height: 253px;
+    width: 258px;
+  }
+}
+
 .reviews-card__image-wrapper {
   margin-bottom: 19px;
 
   @include m.tablet {
     margin: 0;
- }
+  }
 }
 
 .reviews-card__image {
